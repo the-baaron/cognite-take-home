@@ -3,4 +3,4 @@
 2. `npm install`
 3. `npm start`
 
-(Because the question was a simple html page, I included the build in this repo 😅)
+Thanks for a fun little project :)
