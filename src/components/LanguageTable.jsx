@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export default ({ countryData }) => {
+export const LanguageTable = ({ countryData }) => {
   const [languages, setLanguages] = React.useState({});
 
   React.useEffect(() => {
@@ -10,7 +10,7 @@ export default ({ countryData }) => {
     countryData.forEach((country) => {
       country.languages.forEach((language) => {
         newLanguages[language.name] = [
-          ...newLanguages[language.name] || [],
+          ...(newLanguages[language.name] || []),
           country.name,
         ];
       });
@@ -32,9 +32,11 @@ export default ({ countryData }) => {
         <tbody>
           {Object.entries(languages).map(([language, countries]) => {
             return (
-              <tr key={language.name}>
-                <td><strong>{language}</strong></td>
-                <td>{countries.join(', ')}</td>
+              <tr key={language}>
+                <td>
+                  <strong>{language}</strong>
+                </td>
+                <td>{countries.join(", ")}</td>
               </tr>
             );
           })}
