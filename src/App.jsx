@@ -26,7 +26,9 @@ function App() {
     <div className="App">
       {countryData ? (
         <>
+          <h1>Countries</h1>
           <CountryTable countryData={countryData} />
+          <h1>Languages</h1>
           <LanguageTable countryData={countryData} />
           <Summary countryData={countryData} />
         </>
